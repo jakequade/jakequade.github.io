@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="header">
-          <h1>Jake Quade</h1>
-        </header>
-        <div className="body">
-          <p>Well hello there.</p>
-          <p>Test</p>
-        </div>
+        <Route
+          exact
+          path={`/`}
+          render={routerProps => (
+            <div>
+              <p>Hi there</p>
+            </div>
+          )}
+        />
       </div>
     );
   }
